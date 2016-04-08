@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BC9D117D1CB83BF7004B2318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D117C1CB83BF7004B2318 /* AppDelegate.swift */; };
-		BC9D117F1CB83BF7004B2318 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D117E1CB83BF7004B2318 /* ViewController.swift */; };
 		BC9D11821CB83BF7004B2318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9D11801CB83BF7004B2318 /* Main.storyboard */; };
 		BC9D11841CB83BF7004B2318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9D11831CB83BF7004B2318 /* Assets.xcassets */; };
 		BC9D11871CB83BF7004B2318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9D11851CB83BF7004B2318 /* LaunchScreen.storyboard */; };
+		BC9D11921CB83F07004B2318 /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D11911CB83F07004B2318 /* EntryListViewController.swift */; };
+		BC9D11941CB83F95004B2318 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D11931CB83F95004B2318 /* Entry.swift */; };
+		BC9D11961CB840E2004B2318 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D11951CB840E2004B2318 /* EntryDetailViewController.swift */; };
+		BC9D11981CB84110004B2318 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D11971CB84110004B2318 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC9D11791CB83BF7004B2318 /* Journal_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9D117C1CB83BF7004B2318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC9D117E1CB83BF7004B2318 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC9D11811CB83BF7004B2318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC9D11831CB83BF7004B2318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9D11861CB83BF7004B2318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC9D11881CB83BF7004B2318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9D11911CB83F07004B2318 /* EntryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListViewController.swift; sourceTree = "<group>"; };
+		BC9D11931CB83F95004B2318 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		BC9D11951CB840E2004B2318 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		BC9D11971CB84110004B2318 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		BC9D117B1CB83BF7004B2318 /* Journal_Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BC9D11901CB83EEF004B2318 /* Model */,
+				BC9D118F1CB83EE7004B2318 /* View */,
+				BC9D118E1CB83EE1004B2318 /* Controller */,
 				BC9D117C1CB83BF7004B2318 /* AppDelegate.swift */,
-				BC9D117E1CB83BF7004B2318 /* ViewController.swift */,
 				BC9D11801CB83BF7004B2318 /* Main.storyboard */,
 				BC9D11831CB83BF7004B2318 /* Assets.xcassets */,
 				BC9D11851CB83BF7004B2318 /* LaunchScreen.storyboard */,
 				BC9D11881CB83BF7004B2318 /* Info.plist */,
 			);
 			path = Journal_Challenge;
+			sourceTree = "<group>";
+		};
+		BC9D118E1CB83EE1004B2318 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D11971CB84110004B2318 /* EntryController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BC9D118F1CB83EE7004B2318 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D11911CB83F07004B2318 /* EntryListViewController.swift */,
+				BC9D11951CB840E2004B2318 /* EntryDetailViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BC9D11901CB83EEF004B2318 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D11931CB83F95004B2318 /* Entry.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9D117F1CB83BF7004B2318 /* ViewController.swift in Sources */,
+				BC9D11941CB83F95004B2318 /* Entry.swift in Sources */,
 				BC9D117D1CB83BF7004B2318 /* AppDelegate.swift in Sources */,
+				BC9D11981CB84110004B2318 /* EntryController.swift in Sources */,
+				BC9D11961CB840E2004B2318 /* EntryDetailViewController.swift in Sources */,
+				BC9D11921CB83F07004B2318 /* EntryListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
