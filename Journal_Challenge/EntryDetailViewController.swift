@@ -31,7 +31,12 @@ extension EntryDetailViewController: UITextFieldDelegate {
 
 extension EntryDetailViewController: UITextViewDelegate {
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        return bodyTextView.resignFirstResponder()
+        if text == "\n"  // Recognizes enter key in keyboard
+        {
+            bodyTextView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }
 

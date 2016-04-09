@@ -39,6 +39,7 @@ extension EntryController {
     func removeEntry(entry: Entry) {
         if let entryIndex = entryArray.indexOf(entry) {
             entryArray.removeAtIndex(entryIndex)
+            self.saveToPersistentStorage()
         }
     }
 }
